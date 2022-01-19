@@ -1,12 +1,12 @@
 [![npm version](https://badge.fury.io/js/hardhat-gas-reporter.svg)](https://badge.fury.io/js/hardhat-gas-reporter)
-[![Build Status](https://travis-ci.org/cgewecke/hardhat-gas-reporter.svg?branch=master)](https://travis-ci.org/cgewecke/hardhat-gas-reporter)
+[![Build Status](https://travis-ci.org/Temple424/hardhat-gas-reporter.svg?branch=master)](https://travis-ci.org/Temple424/hardhat-gas-reporter)
 [![Codechecks](https://raw.githubusercontent.com/codechecks/docs/master/images/badges/badge-default.svg?sanitize=true)](https://codechecks.io)
-[![buidler](https://hardhat.org/buidler-plugin-badge.svg?1)](https://github.com/cgewecke/hardhat-gas-reporter)
+[![buidler](https://hardhat.org/buidler-plugin-badge.svg?1)](https://github.com/Temple424/hardhat-gas-reporter)
 
 
 # hardhat-gas-reporter
 
-[eth-gas-reporter](https://github.com/cgewecke/eth-gas-reporter) plugin for [hardhat](http://gethardhat.com).
+[eth-gas-reporter](https://github.com/Temple424/eth-gas-reporter) plugin for [hardhat](http://gethardhat.com).
 
 ## What
 
@@ -107,15 +107,15 @@ In order to retrieve the gas price of a particular blockchain, you can configure
 | src               | _String_               | "contracts"                                                                | Folder in root directory to begin search for `.sol` files. This can also be a path to a subfolder relative to the root, e.g. "planets/annares/contracts"                                                                                     |
 | url               | _String_               | `web3.currentProvider.host`                                                | RPC client url (ex: "http://localhost:8545")                                                                                                                                                                                                 |
 | proxyResolver     | _Function_             | none                                                                       | Custom method to resolve identity of methods managed by a proxy contract.                                                                                                                                                                    |
-| artifactType      | _Function_ or _String_ | "truffle-v5"                                                               | Compilation artifact format to consume. (See [advanced use](https://github.com/cgewecke/eth-gas-reporter/blob/master/docs/advanced.md).)                                                                                                     |
+| artifactType      | _Function_ or _String_ | "truffle-v5"                                                               | Compilation artifact format to consume. (See [advanced use](https://github.com/Temple424/eth-gas-reporter/blob/master/docs/advanced.md).)                                                                                                     |
 | showMethodSig     | _Boolean_              | false                                                                      | Display complete method signatures. Useful when you have overloaded methods you can't tell apart.                                                                                                                                            |
 | maxMethodDiff     | _Number_               | undefined                                                                  | Codechecks failure threshold, triggered when the % diff for any method is greater than `number` (integer)                                                                                                                                    |
 | maxDeploymentDiff | _Number_               | undefined                                                                  | Codechecks failure threshold, triggered when the % diff for any deployment is greater than `number` (integer)                                                                                                                                |
 | remoteContracts | _RemoteContract[]_               | `[]`                  | Contracts pre-deployed to a (forked) network which the reporter should collect gas usage data for. (See [RemoteContract type][44] and [usage example][47])                                |
 
-[44]: https://github.com/cgewecke/hardhat-gas-reporter/blob/master/src/types.ts#L27
-[45]: https://github.com/cgewecke/hardhat-gas-reporter/releases/tag/v1.0.3
-[47]: https://github.com/cgewecke/hardhat-gas-reporter/issues/46#issuecomment-728639165
+[44]: https://github.com/Temple424/hardhat-gas-reporter/blob/master/src/types.ts#L27
+[45]: https://github.com/Temple424/hardhat-gas-reporter/releases/tag/v1.0.3
+[47]: https://github.com/Temple424/hardhat-gas-reporter/issues/46#issuecomment-728639165
 [55]: https://coinmarketcap.com/api/pricing/
 
 #### `token` and `gasPriceApi` options example
@@ -136,13 +136,13 @@ These APIs have [rate limits](https://docs.etherscan.io/support/rate-limits). De
 
 ## Documentation
 
-Other useful documentation can be found at [eth-gas-reporter](https://github.com/cgewecke/eth-gas-reporter)
+Other useful documentation can be found at [eth-gas-reporter](https://github.com/Temple424/eth-gas-reporter)
 
-[1]: https://github.com/cgewecke/buidler-gas-reporter/tree/buidler-final#installation
+[1]: https://github.com/Temple424/buidler-gas-reporter/tree/buidler-final#installation
 
 ## Parallelization
 
-This plugin also adds a Hardhat Task for merging several `gasReporterOutput.json` files, which are generated by [eth-gas-reporter](https://github.com/cgewecke/eth-gas-reporter) when [running your tests with in parallelized jobs in CI](https://github.com/cgewecke/eth-gas-reporter/blob/master/docs/gasReporterOutput.md).
+This plugin also adds a Hardhat Task for merging several `gasReporterOutput.json` files, which are generated by [eth-gas-reporter](https://github.com/Temple424/eth-gas-reporter) when [running your tests with in parallelized jobs in CI](https://github.com/Temple424/eth-gas-reporter/blob/master/docs/gasReporterOutput.md).
 
 To use the task you just have to give it the filepaths or a glob pattern pointing to all of the reports:
 ```bash
